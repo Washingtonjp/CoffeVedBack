@@ -10,7 +10,7 @@ public class CorsConfiguration  implements WebMvcConfigurer {
 	@Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-            .allowedOrigins("http://localhost:3000","https://viacep.com.br/")
+            .allowedOrigins("http://localhost:3000","https://viacep.com.br/","https://cofffeved.netlify.app/")
             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS", "HEAD", "TRACE", "CONNECT");
     }
 }
