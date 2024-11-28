@@ -15,6 +15,7 @@ public class ProdutoCardDTO {
 	private String statusProduto;
 	private Integer quantidade = 1; 
 	private Integer estoque;
+	private Double peso;
 
 	public ProdutoCardDTO(Produto produto) {
 		this.id = produto.getId();
@@ -24,13 +25,20 @@ public class ProdutoCardDTO {
 		this.descricao = produto.getDescricao();
 		this.statusProduto = produto.getStatusProduto().toString();  
 		this.estoque = produto.getQuantidade();
+		this.peso = produto.getPeso();
 		}
 	
 	public ProdutoCardDTO() {
 	}
 
+
+
 	public Integer getId() {
 		return id;
+	}
+
+		public Double getPeso() {
+		return peso;
 	}
 
 	public String getNomeProduto() {
